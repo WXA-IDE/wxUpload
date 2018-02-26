@@ -31,7 +31,7 @@ trait curl
         // else
         //  curl_setopt($curl, CURLOPT_USERAGENT, $UserAgent);
         //超时
-        curl_setopt($curl, CURLOPT_TIMEOUT,2);
+        // curl_setopt($curl, CURLOPT_TIMEOUT,2);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
 curl_setopt($curl, CURLINFO_HEADER_OUT, true);

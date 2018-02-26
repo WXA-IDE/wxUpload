@@ -33,7 +33,7 @@ class wxUpload
         $map["os"] = "darwin";
         $map["clientversion"] = "1021802080";
         $map["gzip"] = "1";
-        $map["path"] = "pages%2Findex%2Findex%3F";
+        // $map["path"] = "pages%2Findex%2Findex%3F";
         $map["newticket"] = $this->newticket;
         $url = self::makeUrl( $baseUrl, $map ) . "clientversion=1.02.1802080";
         $return = $this->post( $url, $file, false, 1 );

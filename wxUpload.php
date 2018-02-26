@@ -9,6 +9,6 @@ $Output = "wxapp.wx";
 $wxPacker = new wxPacker( $Input );
 $pack = $wxPacker->getPack( $Output );
 
-$a = new wxUpload("PyLkhRNMtlgsmLFyumOyFcp_DbXRfNStniB8zinAABI");
+$a = new wxUpload("otj3b_9i8kGqly8W_z3yhge9Pa9M1ZCaVhsBudUgqZI");
 $src = $a->upload( $pack );
 echo "<img src='{$src}' />";
