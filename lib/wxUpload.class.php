@@ -2,7 +2,7 @@
 /**
  * User: kajweb
  * Date: 18/2/27
- * Time: 13:55
+ * Time: 19:34
  * Ver 0.9.2
  */
 include "curl.trait.php";   //1802271146
@@ -15,11 +15,11 @@ class wxUpload
     public $appid;
 
 
-    public function perView( $fileMemory ){
+    public function preview( $fileMemory ){
         return self::_upload( $fileMemory );
     }
 
-    public function perViewFile( $filePath ){
+    public function previewFile( $filePath ){
         $file = file_get_contents("wxapp.wx");
         return self::_upload( $filePath );
     }
@@ -34,9 +34,9 @@ class wxUpload
     }
 
     private function _upload( $file, $offical=false, $userVersion=false, $userDesc=false ){
-        $perView = "https://servicewechat.com/wxa-dev/testsource";
+        $preview = "https://servicewechat.com/wxa-dev/testsource";
         $upload = "https://servicewechat.com/wxa-dev/commitsource";
-        $baseUrl = !$offical ? $perView : $upload;
+        $baseUrl = !$offical ? $preview : $upload;
         $map["_r"] = "0." . self::getRand(17);
         $map["appid"] = $this->appid;
         $map["platform"] = "1";
