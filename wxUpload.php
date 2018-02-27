@@ -1,14 +1,17 @@
 <?php
-include 'lib/wxPacker.class.php';
-include 'lib/wxUpload.class.php';
-
-
+include 'lib/wxPacker.class.php';	//1.0.101
+include 'lib/wxUpload.class.php';	//0.9.102
 
 $Input = "wxapp";
 $Output = "wxapp.wx";
-$wxPacker = new wxPacker( $Input );
-$pack = $wxPacker->getPack( $Output );
+$appid = "wxd264b75bd1c77051";
+$newTicket = "7Fak-X4xaSgkkf6qYqN2BUBAIQJ8qJetocLl24xSsxs";
 
-$a = new wxUpload("otj3b_9i8kGqly8W_z3yhge9Pa9M1ZCaVhsBudUgqZI");
+$wxPacker = new wxPacker( $Input );
+$pack = $wxPacker->getPack();
+// $pack = $wxPacker->savePack( $Output );
+
+$a = new wxUpload( $newTicket, $appid );
 $src = $a->upload( $pack );
 echo "<img src='{$src}' />";
+echo "<br>".$a->error;
